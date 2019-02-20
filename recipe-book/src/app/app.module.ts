@@ -14,6 +14,7 @@ import {FormsModule} from "@angular/forms";
 import {DropdownDirective} from "./shared/dropdown.directive";
 import {ShoppingListService} from "./shopping-list/shopping-list.service";
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 // custom directives always have to be added by hand
@@ -28,7 +29,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeEditComponent
 
   ],
   imports: [
