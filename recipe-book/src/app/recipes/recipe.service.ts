@@ -3,6 +3,7 @@ import {Recipe} from "./recipe.model";
 import {EventEmitter, Injectable} from "@angular/core";
 import {Ingredient} from "../shared/ingredient.model";
 import {ShoppingListService} from "../shopping-list/shopping-list.service";
+import index from "@angular/cli/lib/cli";
 
 
 // inject a service into a service
@@ -31,6 +32,10 @@ export class RecipeService {
 //   to return this array from the outside
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   // it might be this
