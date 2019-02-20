@@ -9,9 +9,11 @@ import {Recipe} from "../../recipe.model";
 export class RecipeItemComponent implements OnInit {
   // binding to recipe-list-component
   @Input() recipe: Recipe;
+  @Input() index: number;
+
+
   // @Output() recipeSelected = new EventEmitter<void>();
 
-  constructor() { }
 
   ngOnInit() {
   }
