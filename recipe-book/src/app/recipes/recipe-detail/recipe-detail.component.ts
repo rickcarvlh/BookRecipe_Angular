@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Recipe} from "../recipe.model";
 import {RecipeService} from "../recipe.service";
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
 
 @Component({
@@ -15,7 +15,8 @@ export class RecipeDetailComponent implements OnInit {
   id: number;
 
 
-  constructor(private recipeService: RecipeService, private  route: ActivatedRoute) {
+  constructor(private recipeService: RecipeService, private  route: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -33,6 +34,13 @@ export class RecipeDetailComponent implements OnInit {
   //  click event
   onAddToShoppingList() {
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+  }
+
+  onEditRecipe() {
+    // just a fine way to navigate no need for an id
+    this.router.navigate(['edit'], {relativeTo: this.route});
+    // just for showcase
+    // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
 
 
