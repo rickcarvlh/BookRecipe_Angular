@@ -15,6 +15,10 @@ export class ShoppingListService {
     return this.ingredients.slice();
   }
 
+  getIngredient(index: number){
+    return this.ingredients[index];
+  }
+
 
   // only one ingredient
   addIngredients(ingredient: Ingredient) {
